@@ -7,8 +7,8 @@
 # ============================================================
 set -e
 
-ROOT_DIR="/root/autodl-tmp/server_deploy/Medformer-main"
-LOG_DIR="/root/autodl-tmp/server_deploy/logs"
+ROOT_DIR="$(cd "$(dirname "$0")/Medformer-main" && pwd)"
+LOG_DIR="$(cd "$(dirname "$0")" && pwd)/logs"
 cd "$ROOT_DIR"
 
 # 公共参数

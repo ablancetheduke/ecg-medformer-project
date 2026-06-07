@@ -1,7 +1,7 @@
 #!/bin/bash
 # 队列2号 — 跳过已完成的(Baseline s44, FFT s44)和垃圾Gate
 set -e
-cd /root/autodl-tmp/server_deploy/Medformer-main
+cd "$(dirname "$0")/Medformer-main"
 
 ARGS="--task_name classification --is_training 1 \
   --root_path ./dataset/PTB-XL/ --data PTB-XL \
