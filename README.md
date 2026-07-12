@@ -70,18 +70,25 @@
 
 ## 模型变体
 
-| 模型文件 | 类型 | 说明 |
+所有模型文件位于 `formal_code/Medformer-main/models/` 目录下：
+
+| 完整路径 | 类型 | 说明 |
 |---|---|---|
-| `Medformer.py` | Baseline | 原始 Medformer（纯时域） |
-| `MedformerFFT.py` | 时频融合 | Medformer + FFT 频域分支 (Concat) |
-| `MedformerFFT_bilinear.py` | 融合变体 | Medformer + FFT 双线性融合 |
-| `MedformerFFT_crossattn.py` | 融合变体 | Medformer + FFT 交叉注意力融合 |
-| `MedformerFFT_gate.py` | 融合变体 | Medformer + FFT 门控融合 |
-| `MedformerDCT.py` | 频域变体 | Medformer + DCT 分支 |
-| `MedformerWavelet.py` | 频域变体 | Medformer + Wavelet 分支 |
-| `FrequencyOnly.py` | 消融实验 | 纯 FFT 频谱 + MLP（无时域） |
-| `DCTOnly.py` | 消融实验 | 纯 DCT + MLP |
-| `WaveletOnly.py` | 消融实验 | 纯 Wavelet + MLP |
+| `formal_code/Medformer-main/models/Medformer.py` | Baseline | 原始 Medformer（纯时域） |
+| `formal_code/Medformer-main/models/MedformerFFT.py` | 时频融合 | Medformer + FFT 频域分支 (Concat) |
+| `formal_code/Medformer-main/models/MedformerFFT_bilinear.py` | 融合变体 | Medformer + FFT 双线性融合 |
+| `formal_code/Medformer-main/models/MedformerFFT_crossattn.py` | 融合变体 | Medformer + FFT 交叉注意力融合 |
+| `formal_code/Medformer-main/models/MedformerFFT_gate.py` | 融合变体 | Medformer + FFT 门控融合 |
+| `formal_code/Medformer-main/models/MedformerDCT.py` | 频域变体 | Medformer + DCT 分支 |
+| `formal_code/Medformer-main/models/MedformerWavelet.py` | 频域变体 | Medformer + Wavelet 分支 |
+| `formal_code/Medformer-main/models/FrequencyOnly.py` | 消融实验 | 纯 FFT 频谱 + MLP（无时域） |
+| `formal_code/Medformer-main/models/DCTOnly.py` | 消融实验 | 纯 DCT + MLP |
+| `formal_code/Medformer-main/models/WaveletOnly.py` | 消融实验 | 纯 Wavelet + MLP |
+
+训练入口：`formal_code/Medformer-main/run.py`
+训练引擎：`formal_code/Medformer-main/exp/exp_classification.py`
+数据加载：`formal_code/Medformer-main/data_provider/data_loader.py`
+训练脚本：`formal_code/run_all.sh`, `formal_code/run_single.sh`, `formal_code/run_queue_v2.sh`, `formal_code/run_seeds.sh`
 
 ---
 
