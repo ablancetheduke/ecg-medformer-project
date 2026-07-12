@@ -1,0 +1,7 @@
+check,status,reason,fix
+Project root detected,PASS,E:\deeplearning\ecg_time_frequency_dual_branch_classification,
+Medformer root detected,PASS,E:\deeplearning\ecg_time_frequency_dual_branch_classification\Medformer\Medformer-main,Restore Medformer/Medformer-main
+Experiment CSV,PASS,results\experiments_summary.csv,Run scripts/collect_experiment_results.py or copy results CSV
+Robustness CSV,PASS,results\robustness_results_full_ptbxl.csv,Run scripts/evaluate_robustness.py with checkpoints
+Processed PTB-XL data,PASS,Feature/*.npy + Label/label.npy,Copy processed PTB-XL dataset into Medformer/Medformer-main/dataset/PTB-XL
+Forward smoke test,PASS,See forward_smoke_test.csv,Install missing project dependencies if all models skipped

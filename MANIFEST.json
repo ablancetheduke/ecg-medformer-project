@@ -1,0 +1,582 @@
+[
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\example_physionet.py",
+    "bytes": 1340
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\LICENSE.txt",
+    "bytes": 14842
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\ptbxl_database.csv",
+    "bytes": 9619646
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\ptbxl_v102_changelog.txt",
+    "bytes": 6130
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00001_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00001_lr.hea",
+    "bytes": 596
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00002_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00002_lr.hea",
+    "bytes": 599
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00003_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00003_lr.hea",
+    "bytes": 601
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00004_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00004_lr.hea",
+    "bytes": 611
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00005_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00005_lr.hea",
+    "bytes": 605
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00006_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00006_lr.hea",
+    "bytes": 607
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00007_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00007_lr.hea",
+    "bytes": 600
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00008_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00008_lr.hea",
+    "bytes": 594
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00009_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00009_lr.hea",
+    "bytes": 613
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00010_lr.dat",
+    "bytes": 24000
+  },
+  {
+    "path": "data\\ptb_xl\\raw_partial\\ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.2\\records100\\00000\\00010_lr.hea",
+    "bytes": 609
+  },
+  {
+    "path": "Medformer\\Medformer-main\\data_provider\\__init__.py",
+    "bytes": 1
+  },
+  {
+    "path": "Medformer\\Medformer-main\\data_provider\\data_factory.py",
+    "bytes": 3155
+  },
+  {
+    "path": "Medformer\\Medformer-main\\data_provider\\data_loader.py",
+    "bytes": 25617
+  },
+  {
+    "path": "Medformer\\Medformer-main\\data_provider\\m4.py",
+    "bytes": 4432
+  },
+  {
+    "path": "Medformer\\Medformer-main\\data_provider\\uea.py",
+    "bytes": 6707
+  },
+  {
+    "path": "Medformer\\Medformer-main\\exp\\__init__.py",
+    "bytes": 0
+  },
+  {
+    "path": "Medformer\\Medformer-main\\exp\\exp_anomaly_detection.py",
+    "bytes": 8219
+  },
+  {
+    "path": "Medformer\\Medformer-main\\exp\\exp_basic.py",
+    "bytes": 2193
+  },
+  {
+    "path": "Medformer\\Medformer-main\\exp\\exp_classification.py",
+    "bytes": 12320
+  },
+  {
+    "path": "Medformer\\Medformer-main\\exp\\exp_imputation.py",
+    "bytes": 8787
+  },
+  {
+    "path": "Medformer\\Medformer-main\\exp\\exp_long_term_forecasting.py",
+    "bytes": 13137
+  },
+  {
+    "path": "Medformer\\Medformer-main\\exp\\exp_short_term_forecasting.py",
+    "bytes": 11278
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\__init__.py",
+    "bytes": 0
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\Augmentation.py",
+    "bytes": 3606
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\AutoCorrelation.py",
+    "bytes": 6831
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\Autoformer_EncDec.py",
+    "bytes": 7069
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\Conv_Blocks.py",
+    "bytes": 6261
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\Crossformer_EncDec.py",
+    "bytes": 4595
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\Embed.py",
+    "bytes": 10452
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\ETSformer_EncDec.py",
+    "bytes": 11659
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\FourierCorrelation.py",
+    "bytes": 8280
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\Medformer_EncDec.py",
+    "bytes": 2029
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\MultiWaveletCorrelation.py",
+    "bytes": 24425
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\Pyraformer_EncDec.py",
+    "bytes": 7719
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\SelfAttention_Family.py",
+    "bytes": 15059
+  },
+  {
+    "path": "Medformer\\Medformer-main\\layers\\Transformer_EncDec.py",
+    "bytes": 4930
+  },
+  {
+    "path": "Medformer\\Medformer-main\\LICENSE",
+    "bytes": 1092
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\__init__.py",
+    "bytes": 0
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\Autoformer.py",
+    "bytes": 7470
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\Crossformer.py",
+    "bytes": 7210
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\DCTOnly.py",
+    "bytes": 1655
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\FEDformer.py",
+    "bytes": 8200
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\FrequencyOnly.py",
+    "bytes": 60
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\Informer.py",
+    "bytes": 7081
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\iTransformer.py",
+    "bytes": 6144
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\Medformer.py",
+    "bytes": 4210
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\MedformerDCT.py",
+    "bytes": 4284
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\MedformerFFT.py",
+    "bytes": 5001
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\MedformerFFT_bilinear.py",
+    "bytes": 4172
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\MedformerFFT_crossattn.py",
+    "bytes": 7131
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\MedformerFFT_gate.py",
+    "bytes": 4396
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\MedformerWavelet.py",
+    "bytes": 5663
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\MTST.py",
+    "bytes": 4681
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\Nonstationary_Transformer.py",
+    "bytes": 10846
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\PatchTST.py",
+    "bytes": 8998
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\Reformer.py",
+    "bytes": 5289
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\TCN.py",
+    "bytes": 2699
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\Transformer.py",
+    "bytes": 6417
+  },
+  {
+    "path": "Medformer\\Medformer-main\\models\\WaveletOnly.py",
+    "bytes": 2725
+  },
+  {
+    "path": "Medformer\\Medformer-main\\README.md",
+    "bytes": 17039
+  },
+  {
+    "path": "Medformer\\Medformer-main\\requirements.txt",
+    "bytes": 206
+  },
+  {
+    "path": "Medformer\\Medformer-main\\run.py",
+    "bytes": 12757
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\Autoformer.sh",
+    "bytes": 2225
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\Crossformer.sh",
+    "bytes": 2973
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\FEDformer.sh",
+    "bytes": 2219
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\Informer.sh",
+    "bytes": 2212
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\iTransformer.sh",
+    "bytes": 2236
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\Medformer.sh",
+    "bytes": 10545
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\MTST.sh",
+    "bytes": 2363
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\Nonstationary_Transformer.sh",
+    "bytes": 2314
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\PatchTST.sh",
+    "bytes": 2212
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\Reformer.sh",
+    "bytes": 2949
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\TCN.sh",
+    "bytes": 1116
+  },
+  {
+    "path": "Medformer\\Medformer-main\\scripts\\classification\\Transformer.sh",
+    "bytes": 2973
+  },
+  {
+    "path": "Medformer\\Medformer-main\\utils\\__init__.py",
+    "bytes": 0
+  },
+  {
+    "path": "Medformer\\Medformer-main\\utils\\eval_protocols.py",
+    "bytes": 3522
+  },
+  {
+    "path": "Medformer\\Medformer-main\\utils\\losses.py",
+    "bytes": 6111
+  },
+  {
+    "path": "Medformer\\Medformer-main\\utils\\m4_summary.py",
+    "bytes": 6532
+  },
+  {
+    "path": "Medformer\\Medformer-main\\utils\\masking.py",
+    "bytes": 1901
+  },
+  {
+    "path": "Medformer\\Medformer-main\\utils\\metrics.py",
+    "bytes": 880
+  },
+  {
+    "path": "Medformer\\Medformer-main\\utils\\timefeatures.py",
+    "bytes": 4369
+  },
+  {
+    "path": "Medformer\\Medformer-main\\utils\\tools.py",
+    "bytes": 3589
+  },
+  {
+    "path": "MedformerFFT_PTBXL_Complete_Experiment.executed.ipynb",
+    "bytes": 1222205
+  },
+  {
+    "path": "notebooks\\notebook_figures\\demo_fft_spectrum.png",
+    "bytes": 103656
+  },
+  {
+    "path": "notebooks\\notebook_figures\\fig_ablation_summary.png",
+    "bytes": 63564
+  },
+  {
+    "path": "notebooks\\notebook_figures\\fig_avg_spectrum.png",
+    "bytes": 90453
+  },
+  {
+    "path": "notebooks\\notebook_figures\\fig_clean_gain.png",
+    "bytes": 30563
+  },
+  {
+    "path": "notebooks\\notebook_figures\\fig_robustness_summary.png",
+    "bytes": 132893
+  },
+  {
+    "path": "notebooks\\notebook_figures\\fig_waveform_fft.png",
+    "bytes": 89806
+  },
+  {
+    "path": "notebooks\\notebook_figures\\roc_curves.png",
+    "bytes": 328014
+  },
+  {
+    "path": "notebooks\\notebook_figures\\synthetic_12lead_ecg.png",
+    "bytes": 314660
+  },
+  {
+    "path": "notebooks\\notebook_figures\\validation_f1_curves.png",
+    "bytes": 84844
+  },
+  {
+    "path": "outputs\\notebook\\execution_status.csv",
+    "bytes": 742
+  },
+  {
+    "path": "outputs\\notebook\\figures\\demo_fft_spectrum.png",
+    "bytes": 103656
+  },
+  {
+    "path": "outputs\\notebook\\figures\\synthetic_12lead_ecg.png",
+    "bytes": 314660
+  },
+  {
+    "path": "outputs\\notebook\\figures\\validation_f1_curves.png",
+    "bytes": 84844
+  },
+  {
+    "path": "outputs\\notebook\\forward_smoke_test.csv",
+    "bytes": 411
+  },
+  {
+    "path": "outputs\\notebook\\main_results_multiseed.csv",
+    "bytes": 505
+  },
+  {
+    "path": "outputs\\notebook\\medformerfft_seed41_test_labels.npy",
+    "bytes": 316528
+  },
+  {
+    "path": "outputs\\notebook\\medformerfft_seed41_test_preds.npy",
+    "bytes": 316528
+  },
+  {
+    "path": "outputs\\notebook\\medformerfft_seed41_test_probs.npy",
+    "bytes": 791128
+  },
+  {
+    "path": "outputs\\notebook\\parsed_experiment_results.csv",
+    "bytes": 7544
+  },
+  {
+    "path": "outputs\\notebook\\robustness_summary.csv",
+    "bytes": 1862
+  },
+  {
+    "path": "outputs\\notebook\\server_training_evidence_files.csv",
+    "bytes": 346
+  },
+  {
+    "path": "outputs\\notebook\\training_curves_parsed.csv",
+    "bytes": 115850
+  },
+  {
+    "path": "README.md",
+    "bytes": 2797
+  },
+  {
+    "path": "results\\experiments_summary.csv",
+    "bytes": 6874
+  },
+  {
+    "path": "results\\logs\\PTB-XL-Baseline-s42.log",
+    "bytes": 473751
+  },
+  {
+    "path": "results\\logs\\PTB-XL-Baseline-s43.log",
+    "bytes": 707212
+  },
+  {
+    "path": "results\\logs\\PTB-XL-Baseline-s44.log",
+    "bytes": 236463
+  },
+  {
+    "path": "results\\logs\\PTB-XL-Baseline.log",
+    "bytes": 236457
+  },
+  {
+    "path": "results\\logs\\PTB-XL-Bilinear-s42.log",
+    "bytes": 221345
+  },
+  {
+    "path": "results\\logs\\PTB-XL-Bilinear.log",
+    "bytes": 221362
+  },
+  {
+    "path": "results\\logs\\PTB-XL-CrossAttn.log",
+    "bytes": 291056
+  },
+  {
+    "path": "results\\logs\\PTB-XL-CrossAttnV2-s42.log",
+    "bytes": 261098
+  },
+  {
+    "path": "results\\logs\\PTB-XL-CrossAttnV2.log",
+    "bytes": 196078
+  },
+  {
+    "path": "results\\logs\\PTB-XL-DCT.log",
+    "bytes": 238265
+  },
+  {
+    "path": "results\\logs\\PTB-XL-DCTOnly.log",
+    "bytes": 337178
+  },
+  {
+    "path": "results\\logs\\PTB-XL-FFT-s42.log",
+    "bytes": 477433
+  },
+  {
+    "path": "results\\logs\\PTB-XL-FFT-s43.log",
+    "bytes": 707129
+  },
+  {
+    "path": "results\\logs\\PTB-XL-FFT-s44.log",
+    "bytes": 240133
+  },
+  {
+    "path": "results\\logs\\PTB-XL-FFT.log",
+    "bytes": 172552
+  },
+  {
+    "path": "results\\logs\\PTB-XL-FrequencyOnly.log",
+    "bytes": 304010
+  },
+  {
+    "path": "results\\logs\\PTB-XL-Gate.log",
+    "bytes": 209637
+  },
+  {
+    "path": "results\\logs\\PTB-XL-Wavelet-s42.log",
+    "bytes": 247653
+  },
+  {
+    "path": "results\\logs\\PTB-XL-Wavelet.log",
+    "bytes": 171316
+  },
+  {
+    "path": "results\\logs\\PTB-XL-WaveletOnly.log",
+    "bytes": 150625
+  },
+  {
+    "path": "results\\robustness_results.csv",
+    "bytes": 9386
+  },
+  {
+    "path": "results\\robustness_results_full_ptbxl.csv",
+    "bytes": 8804
+  },
+  {
+    "path": "scripts\\collect_experiment_results.py",
+    "bytes": 26191
+  },
+  {
+    "path": "scripts\\evaluate_robustness.py",
+    "bytes": 16715
+  }
+]

@@ -1,0 +1,6 @@
+model,status,input_shape,logits_shape,has_nan,params,trainable,time_ms,reason
+Baseline,PASS,"(8, 250, 12)","(8, 5)",False,7673349,7673349,1292.7,
+Time+FFT,PASS,"(8, 250, 12)","(8, 5)",False,8094213,8094213,224.75,
+FFT-only,PASS,"(8, 250, 12)","(8, 5)",False,420869,420869,3.77,
+DCT,PASS,"(8, 250, 12)","(8, 5)",False,8475141,8475141,225.68,
+DCT-only,PASS,"(8, 250, 12)","(8, 5)",False,801797,801797,4.43,
