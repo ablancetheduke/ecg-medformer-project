@@ -1,61 +1,134 @@
-# MedformerFFT on PTB-XL
+# Medformer ECG 时频双分支分类实验
 
-MedformerFFT 是一个面向 PTB-XL 五分类 ECG 任务的时频双分支实验项目：以 Medformer 建模时域波形，并通过轻量级 FFT 分支编码幅度谱，随后进行特征拼接分类。
+基于 Medformer (NeurIPS 2024) 在 PTB-XL 心电图数据集上的五分类复现与改进实验。核心思路：在 Medformer 时域建模基础上引入 FFT/DCT/Wavelet 频域分支，探索时频融合是否提升 ECG 分类性能。
 
 - 项目仓库：[ablancetheduke/ecg-medformer-project](https://github.com/ablancetheduke/ecg-medformer-project)
-- Notebook：`MedformerFFT_PTBXL_Complete_Experiment.executed.ipynb`
+- 主实验 Notebook：`MedformerFFT_PTBXL_Complete_Experiment.executed.ipynb`
 
-本目录包含 Notebook、核心 Python 源码、PTB-XL 原始样例、训练日志、实验汇总、预测数组和可视化结果。
+---
 
-## 目录说明
+## 主要结论
+
+| 模型 | 种子数 | Test Acc | Test F1 | Test AUROC | Test AUPRC |
+|---|---|---|---|---|---|
+| **Medformer (Baseline)** | 3 | 73.04% ± 0.20 | 61.75% ± 0.13 | 89.46% ± 0.18 | 65.94% ± 0.22 |
+| **MedformerFFT (Concat)** | 3 | **73.20%** ± 0.11 | **61.88%** ± 0.05 | **89.53%** ± 0.19 | **66.27%** ± 0.44 |
+| FrequencyOnly (消融) | 1 | 65.46% | 51.89% | 84.53% | 56.46% |
+
+**FFT 频域分支带来一致但微弱提升**（+0.16% Acc, +0.13% F1, +0.33% AUPRC），纯频域模型大幅落后，说明时域建模对 ECG 分类不可替代。
+
+多种融合策略对比（单次运行最佳结果）：
+
+| 融合策略 | Test Acc | Test F1 | Test AUROC |
+|---|---|---|---|
+| Gate Fusion | **73.40%** | 61.70% | **89.57%** |
+| Baseline (纯时域) | 73.10% | 61.90% | 89.38% |
+| FFT Concat | 73.27% | 61.82% | 89.52% |
+| Wavelet | 73.33% | 61.72% | 89.28% |
+| Bilinear | 72.84% | 60.83% | 89.42% |
+| DCT | 72.26% | 61.08% | 89.17% |
+| Cross-Attention | 64.90% | 50.02% | 84.12% |
+
+---
+
+## 目录结构
 
 ```
 深度学习/
-├── MedformerFFT_PTBXL_Complete_Experiment.executed.ipynb  # 实验流程与结果分析
-├── Medformer/Medformer-main/       # 训练入口、数据加载、模型、训练与评估代码
-├── data/ptb_xl/raw_partial/        # PTB-XL 元数据与 10 条 12 导联原始样例
-├── results/                        # 全部训练日志、实验汇总和鲁棒性结果
-├── outputs/notebook/               # Notebook 使用的预测概率、标签与预测类别
-├── notebooks/notebook_figures/     # 训练曲线、ROC、频谱等已有图片
-└── scripts/                        # 结果汇总和鲁棒性分析脚本
+├── MedformerFFT_PTBXL_Complete_Experiment.executed.ipynb  ← 主实验 Notebook
+│
+├── Medformer-main/              ← 模型代码（完整版，含预处理/图表/实验 Notebook）
+│   ├── models/                  # Medformer、MedformerFFT、MedformerDCT 等
+│   ├── data_provider/           # 数据加载器 (PTBXLLoader)
+│   ├── exp/                     # 训练/评估引擎
+│   ├── layers/                  # Attention、Embedding 等
+│   ├── data_preprocessing/      # PTB-XL 等数据集预处理 Notebook
+│   ├── scripts/classification/  # 各模型训练脚本
+│   ├── run.py / meta-run.py     # 训练入口
+│   └── figs/                    # 模型架构图
+│
+├── Medformer/Medformer-main/    ← 本地实验使用的代码副本（子集）
+│
+├── data/ptb_xl/raw_partial/     ← PTB-XL 元数据 + 10 条 12 导联样例 (.dat/.hea)
+│
+├── results/                     ← 训练日志 + 实验汇总 + 鲁棒性结果
+│   ├── logs/                    # 全部训练日志 (20 个 .log 文件)
+│   ├── experiments_summary.csv  # 实验指标汇总
+│   └── robustness_results*.csv  # 鲁棒性评估
+│
+├── outputs/notebook/            ← Notebook 使用的预测数组和中间结果
+│   ├── main_results_multiseed.csv  # 多种子汇总
+│   ├── training_curves_parsed.csv  # 训练曲线数据
+│   └── medformerfft_seed41_*.npy   # 预测概率/标签
+│
+├── notebooks/notebook_figures/  ← 可视化图片
+│   ├── roc_curves.png
+│   ├── validation_f1_curves.png
+│   ├── fig_robustness_summary.png
+│   └── ...
+│
+├── scripts/                     ← 工具脚本
+│   ├── collect_experiment_results.py
+│   └── evaluate_robustness.py
+│
+├── run_all.sh / run_single.sh   ← 服务器训练脚本
+├── setup.sh                     ← 服务器环境配置
+├── RECORD.md                    ← 实验记录模板
+├── README_FIRST.txt             ← 服务器部署说明
+├── EXPERIMENT_README.md         ← 仓库说明（英文）
+├── 期末大作业.docx / .pdf        ← 期末报告
+└── MANIFEST.json                ← 文件清单
 ```
 
-## 代码入口
+---
 
-- `Medformer/Medformer-main/run.py`：训练与测试入口。
-- `Medformer/Medformer-main/data_provider/data_loader.py`：`PTBXLLoader` 和标准化预处理。
-- `Medformer/Medformer-main/data_provider/data_factory.py`：数据集与 DataLoader 注册。
-- `Medformer/Medformer-main/models/MedformerFFT.py`：时频双分支模型。
-- `Medformer/Medformer-main/exp/exp_classification.py`：训练、验证、测试、早停与指标计算。
-- `scripts/collect_experiment_results.py`：解析日志并生成实验汇总。
-- `scripts/evaluate_robustness.py`：鲁棒性评估。
+## 模型变体
 
-## 数据子集
+| 模型文件 | 类型 | 说明 |
+|---|---|---|
+| `Medformer.py` | Baseline | 原始 Medformer（纯时域） |
+| `MedformerFFT.py` | 时频融合 | Medformer + FFT 频域分支 (Concat) |
+| `MedformerFFT_bilinear.py` | 融合变体 | Medformer + FFT 双线性融合 |
+| `MedformerFFT_crossattn.py` | 融合变体 | Medformer + FFT 交叉注意力融合 |
+| `MedformerFFT_gate.py` | 融合变体 | Medformer + FFT 门控融合 |
+| `MedformerDCT.py` | 频域变体 | Medformer + DCT 分支 |
+| `MedformerWavelet.py` | 频域变体 | Medformer + Wavelet 分支 |
+| `FrequencyOnly.py` | 消融实验 | 纯 FFT 频谱 + MLP（无时域） |
+| `DCTOnly.py` | 消融实验 | 纯 DCT + MLP |
+| `WaveletOnly.py` | 消融实验 | 纯 Wavelet + MLP |
 
-`data/ptb_xl/raw_partial/.../records100/00000/` 含 00001--00010 的 `.hea` 和 `.dat` 文件，每条为 PTB-XL 低采样率 12 导联记录；`ptbxl_database.csv` 为对应的原始元数据。该子集可用于检查数据格式、读取波形和运行 Notebook 的数据探索部分。
-
-完整训练使用预处理后的 `Feature/*.npy` 与 `Label/label.npy`，应放到 `Medformer/Medformer-main/dataset/PTB-XL/`。本整理包不包含完整训练数据。
+---
 
 ## 环境与运行
 
-```powershell
-cd 深度学习
-python -m pip install -r Medformer/Medformer-main/requirements.txt
+```bash
+# 安装依赖
+pip install -r Medformer-main/requirements.txt
+
+# 启动 Notebook
 jupyter notebook MedformerFFT_PTBXL_Complete_Experiment.executed.ipynb
 ```
 
-完整训练命令见 Notebook 与 `Medformer/Medformer-main/run.py`。测试集预测数组、训练日志和结果汇总保存在 `outputs/notebook/` 与 `results/`。
+完整训练（需准备 PTB-XL 预处理后的 `.npy` 数据）：
 
-## 模型权重与 Release
+```bash
+# 单个实验
+bash run_single.sh MedformerFFT 64
 
-为避免将大文件写入 Git 历史，训练数据与模型权重不随常规仓库提交。主实验 checkpoint 已单独归档为 `checkpoints_backup.tar.gz`（约 1.5 GB），计划作为 GitHub Release 附件发布：
+# 多实验队列
+bash run_queue_v2.sh
 
-<https://github.com/ablancetheduke/ecg-medformer-project/releases>
-
-发布后，下载并解压该归档，将其中的 checkpoint 目录恢复到：
-
-```text
-Medformer/Medformer-main/checkpoints/
+# 多种子
+bash run_seeds.sh
 ```
 
-随后可通过 `Exp_Classification.test(..., test=1)` 加载验证集 Macro F1 最优权重并运行测试评估。权重未就绪时，Notebook 中的数据探索、日志解析、曲线绘制和已保存预测结果分析仍可运行。
+---
+
+## 数据说明
+
+- `data/ptb_xl/raw_partial/` 包含 PTB-XL 公开数据集的 10 条低采样率 12 导联记录（`.hea` + `.dat`）及 `ptbxl_database.csv` 元数据，可用于数据探索和格式验证
+- 完整训练数据需从 [PhysioNet](https://physionet.org/content/ptb-xl/) 下载并预处理，放置在 `Medformer-main/dataset/PTB-XL/` 下
+
+## 模型权重
+
+主实验 checkpoint 约 1.5 GB，已单独归档为 `checkpoints_backup.tar.gz`，计划作为 [GitHub Release](https://github.com/ablancetheduke/ecg-medformer-project/releases) 附件发布。权重未就绪时，Notebook 中的数据探索、日志解析、曲线绘制和已保存预测结果分析仍可运行。
