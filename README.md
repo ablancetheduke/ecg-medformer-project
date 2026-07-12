@@ -47,8 +47,6 @@
 │   ├── run.py / meta-run.py     # 训练入口
 │   └── figs/                    # 模型架构图
 │
-├── Medformer/Medformer-main/    ← 本地实验使用的代码副本（子集）
-│
 ├── data/ptb_xl/raw_partial/     ← PTB-XL 元数据 + 10 条 12 导联样例 (.dat/.hea)
 │
 ├── results/                     ← 训练日志 + 实验汇总 + 鲁棒性结果
