@@ -130,3 +130,11 @@ bash run_seeds.sh
 ## 模型权重
 
 主实验 checkpoint 约 1.5 GB，已单独归档为 `checkpoints_backup.tar.gz`，计划作为 [GitHub Release](https://github.com/ablancetheduke/ecg-medformer-project/releases) 附件发布。权重未就绪时，Notebook 中的数据探索、日志解析、曲线绘制和已保存预测结果分析仍可运行。
+
+## 特殊说明
+
+本项目的完整实验采用 Python 脚本在 RTX4090服务器用时一周完成。由于主实验包含 Baseline、MedformerFFT 及多个消融模型，并对主模型使用随机种子 42、43、44 进行重复训练，单次训练耗时较长，因此训练任务、日志记录和 checkpoint 保存均通过项目中的命令行训练入口执行。
+
+本 Notebook 依据同一项目代码整理而成，用于集中展示实验流程与结果，包括数据读取与预处理、模型结构、训练配置、评估方法、训练曲线、测试集结果和消融分析。Notebook 中展示的指标、图像、预测数组和结果表均来自项目实际运行过程中保存的日志、checkpoint 或评估输出，不使用人工构造的实验结果。当前 Notebook 可直接完成数据样例检查、日志解析、结果可视化及已保存预测结果的分析；在配置完整 PTB-XL 预处理数据和 checkpoint 后，也可调用项目评估流程重新加载模型并在测试集上计算指标。完整训练可通过项目训练脚本在具备相应 GPU 环境的设备上执行。
+
+本人主页以及本文件夹也放置相应的实验代码。最后论文准备word以及pdf，其中word版本由pdf转换而来，按照发表论文格式书写，后附有实验报告，故均为图片内容，望老师理解。
