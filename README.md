@@ -36,46 +36,34 @@
 ```
 深度学习/
 ├── MedformerFFT_PTBXL_Complete_Experiment.executed.ipynb  ← 主实验 Notebook
+├── 期末大作业.docx / 期末大作业.pdf    ← 期末报告
+├── README.md                         ← 本文件
+├── MANIFEST.json                     ← 文件清单
 │
-├── Medformer-main/              ← 模型代码（完整版，含预处理/图表/实验 Notebook）
-│   ├── models/                  # Medformer、MedformerFFT、MedformerDCT 等
-│   ├── data_provider/           # 数据加载器 (PTBXLLoader)
-│   ├── exp/                     # 训练/评估引擎
-│   ├── layers/                  # Attention、Embedding 等
-│   ├── data_preprocessing/      # PTB-XL 等数据集预处理 Notebook
-│   ├── scripts/classification/  # 各模型训练脚本
-│   ├── run.py / meta-run.py     # 训练入口
-│   └── figs/                    # 模型架构图
+├── formal_code/                      ← 训练代码与部署脚本
+│   ├── Medformer-main/               # 模型代码（完整版）
+│   │   ├── models/                   # Medformer、MedformerFFT、MedformerDCT 等
+│   │   ├── data_provider/            # 数据加载器 (PTBXLLoader)
+│   │   ├── exp/                      # 训练/评估引擎
+│   │   ├── layers/                   # Attention、Embedding 等
+│   │   ├── data_preprocessing/       # PTB-XL 等数据集预处理
+│   │   ├── scripts/classification/   # 各模型训练脚本
+│   │   ├── run.py / meta-run.py      # 训练入口
+│   │   └── figs/                     # 模型架构图
+│   ├── run_all.sh / run_single.sh    # 训练调度脚本
+│   ├── run_queue.sh / run_queue_v2.sh
+│   ├── run_seeds.sh / timing_test.sh
+│   ├── setup.sh / pack_for_server.bat
+│   ├── README_FIRST.txt              # 服务器部署说明
+│   ├── RECORD.md                     # 实验记录模板
+│   └── EXPERIMENT_README.md          # 仓库说明（英文）
 │
-├── data/ptb_xl/raw_partial/     ← PTB-XL 元数据 + 10 条 12 导联样例 (.dat/.hea)
+├── data/ptb_xl/raw_partial/          ← PTB-XL 元数据 + 10 条 ECG 样例
 │
-├── results/                     ← 训练日志 + 实验汇总 + 鲁棒性结果
-│   ├── logs/                    # 全部训练日志 (20 个 .log 文件)
-│   ├── experiments_summary.csv  # 实验指标汇总
-│   └── robustness_results*.csv  # 鲁棒性评估
-│
-├── outputs/notebook/            ← Notebook 使用的预测数组和中间结果
-│   ├── main_results_multiseed.csv  # 多种子汇总
-│   ├── training_curves_parsed.csv  # 训练曲线数据
-│   └── medformerfft_seed41_*.npy   # 预测概率/标签
-│
-├── notebooks/notebook_figures/  ← 可视化图片
-│   ├── roc_curves.png
-│   ├── validation_f1_curves.png
-│   ├── fig_robustness_summary.png
-│   └── ...
-│
-├── scripts/                     ← 工具脚本
-│   ├── collect_experiment_results.py
-│   └── evaluate_robustness.py
-│
-├── run_all.sh / run_single.sh   ← 服务器训练脚本
-├── setup.sh                     ← 服务器环境配置
-├── RECORD.md                    ← 实验记录模板
-├── README_FIRST.txt             ← 服务器部署说明
-├── EXPERIMENT_README.md         ← 仓库说明（英文）
-├── 期末大作业.docx / .pdf        ← 期末报告
-└── MANIFEST.json                ← 文件清单
+├── results/                          ← 训练日志 + 实验汇总 + 鲁棒性结果
+├── outputs/notebook/                 ← Notebook 预测数组和中间结果
+├── notebooks/notebook_figures/       ← 可视化图片
+└── scripts/                          ← 工具脚本
 ```
 
 ---
@@ -101,7 +89,7 @@
 
 ```bash
 # 安装依赖
-pip install -r Medformer-main/requirements.txt
+pip install -r formal_code/Medformer-main/requirements.txt
 
 # 启动 Notebook
 jupyter notebook MedformerFFT_PTBXL_Complete_Experiment.executed.ipynb
@@ -110,6 +98,8 @@ jupyter notebook MedformerFFT_PTBXL_Complete_Experiment.executed.ipynb
 完整训练（需准备 PTB-XL 预处理后的 `.npy` 数据）：
 
 ```bash
+cd formal_code
+
 # 单个实验
 bash run_single.sh MedformerFFT 64
 
@@ -125,7 +115,7 @@ bash run_seeds.sh
 ## 数据说明
 
 - `data/ptb_xl/raw_partial/` 包含 PTB-XL 公开数据集的 10 条低采样率 12 导联记录（`.hea` + `.dat`）及 `ptbxl_database.csv` 元数据，可用于数据探索和格式验证
-- 完整训练数据需从 [PhysioNet](https://physionet.org/content/ptb-xl/) 下载并预处理，放置在 `Medformer-main/dataset/PTB-XL/` 下
+- 完整训练数据需从 [PhysioNet](https://physionet.org/content/ptb-xl/) 下载并预处理，放置在 `formal_code/Medformer-main/dataset/PTB-XL/` 下
 
 ## 模型权重
 
